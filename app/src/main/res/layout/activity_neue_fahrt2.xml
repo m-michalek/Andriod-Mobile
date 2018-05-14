@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NeueFahrt2">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation" >
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/text_neueFahrt2"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
+        android:text="Neue Fahrt 2/2"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_offer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Hinfahrt"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="Früheste Abfahrt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt2" />
+
+// Calender + Time
+
+// Früheste Abfahrt
+    <EditText
+        android:id="@+id/txt_date_FrAb"
+        android:layout_width="104dp"
+        android:layout_height="42dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="select date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/btn_datepicker_FrAb"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toEndOf="@+id/txt_date_FrAb"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/txt_time_FrAb"
+        android:layout_width="105dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="select time"
+        app:layout_constraintStart_toEndOf="@+id/btn_datepicker_FrAb"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/btn_timepicker_FrAb"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/btn_datepicker_FrAb"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toEndOf="@+id/txt_time_FrAb"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    // Späteste Ankunft
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Späteste Ankunft"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date_FrAb" />
+
+
+    <EditText
+        android:id="@+id/txt_date_SpAn"
+        android:layout_width="104dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="select date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btn_datepicker_SpAn"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toEndOf="@+id/txt_date_SpAn"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/txt_time_SpAn"
+        android:layout_width="105dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="select time"
+        app:layout_constraintStart_toEndOf="@+id/btn_datepicker_SpAn"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btn_timepicker_SpAn"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/btn_datepicker_FrAb"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toEndOf="@+id/txt_time_SpAn"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+</android.support.constraint.ConstraintLayout>

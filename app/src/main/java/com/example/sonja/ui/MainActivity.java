@@ -1,18 +1,17 @@
 package com.example.sonja.ui;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -43,6 +42,7 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
+
   /*  Entwurf--
   Soll testen, ob App das erste Mal geöffnet wird. Scheitert daran, wie es in den SharedPreferences als Boolean gescheitert ist.
 
@@ -63,14 +63,24 @@ public class MainActivity extends AppCompatActivity  {
 
     public void onClickLogin(View v) {
         //ruft Screen2 auf
-        Intent intent = new Intent(this, Screen2.class);
+        Intent intent = new Intent(this, NeueFahrt2.class);
+        startActivity(intent);
+        this.finish();
+
+    }
+
+
+    public void onClick(View v) {
+        //ruft NeueFahrt1 auf
+        Intent intent = new Intent(this, NeueFahrt1.class);
+
         startActivity(intent);
         this.finish();
     }
 
     public void onClick_ForgotPassword(View v) {
         //if password is forgotten (ruft jetzt erstmal Screen2 auf, solange es keine anderen gibt)
-        Intent intent = new Intent(this, Screen2.class);
+        Intent intent = new Intent(this, NeueFahrt2.class);
         startActivity(intent);
         this.finish();
     }
