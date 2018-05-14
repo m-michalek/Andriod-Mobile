@@ -5,6 +5,7 @@ import android.app.Activity;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class Onboarding extends Activity {
 
@@ -40,7 +42,7 @@ public class Onboarding extends Activity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
 
@@ -129,19 +131,33 @@ public class Onboarding extends Activity {
     // Fourth and final Page of Onboarding Slides
     public static class Onboarding4 extends Fragment {
 
+        Button btn_GetStarted;
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_onboarding4, container, false);
             return rootView;
+
+           // btn_GetStarted = findViewById(R.id.btn_GetStarted);
+           // btn_GetStarted.getBackground().setAlpha(1);
+        }
+
+        public void onClickGetStarted (View v) {
+            System.out.println("onClick_GetStarted aufgerufen");
+           /* Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            this.finish();*/
         }
 
     }
 
-    /* TODO:
-        Idee wäre jetzt, nach Onboarding4 direkt zum Create Account Screen weiterzuleiten, nach dem gleichen
-        Schema, wie bei den anderen Tabs.
-     */
+
+    public void onClickGetStarted (View v) {
+            System.out.println("onClick_GetStarted aufgerufen");
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+    }
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

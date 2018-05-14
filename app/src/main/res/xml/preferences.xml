@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <CheckBoxPreference
+        android:key="@string/sharedPrefsFirstRun"
+        android:title="First Run"
+        android:defaultValue="true"
+
+        />
+
+    <EditTextPreference
+        android:key="@string/sharedPrefsFirstRunString"
+        android:title="first run"
+        android:inputType="text"
+        android:defaultValue="true"
+        />
+
+</PreferenceScreen>
