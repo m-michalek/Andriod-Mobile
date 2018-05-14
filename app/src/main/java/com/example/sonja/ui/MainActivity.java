@@ -62,13 +62,12 @@ public class MainActivity extends AppCompatActivity  {
     }*/
 
     public void onClickLogin(View v) {
-        //ruft Screen2 auf
-        Intent intent = new Intent(this, NeueFahrt2.class);
+        //ruft NeueFahrt1 auf
+        Intent intent = new Intent(this, NeueFahrt1.class);
         startActivity(intent);
         this.finish();
 
     }
-
 
     public void onClick(View v) {
         //ruft NeueFahrt1 auf
