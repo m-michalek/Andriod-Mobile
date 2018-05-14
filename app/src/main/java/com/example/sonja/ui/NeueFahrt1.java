@@ -2,22 +2,14 @@ package com.example.sonja.ui;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class Screen2 extends AppCompatActivity implements View.OnClickListener{
+public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListener{
 
     Button btn_weiter_screen2;
     Button btn_search;
@@ -27,7 +19,7 @@ public class Screen2 extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen2);
+        setContentView(R.layout.activity_neue_fahrt1);
 
         // Buttons OnClickListener
         btn_weiter_screen2 = (Button) findViewById(R.id.btn_weiter_screen2);
@@ -61,7 +53,7 @@ public class Screen2 extends AppCompatActivity implements View.OnClickListener{
 
             case R.id.btn_weiter_screen2:
                 // auf Screen3 weiterleiten
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, NeueFahrt2.class);
                 startActivity(intent);
                 this.finish();
                 break;

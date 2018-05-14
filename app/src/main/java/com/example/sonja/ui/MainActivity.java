@@ -1,16 +1,11 @@
 package com.example.sonja.ui;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,8 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        //ruft Screen2 auf
-        Intent intent = new Intent(this, Screen2.class);
+        //ruft NeueFahrt1 auf
+        Intent intent = new Intent(this, NeueFahrt1.class);
         startActivity(intent);
         this.finish();
     }

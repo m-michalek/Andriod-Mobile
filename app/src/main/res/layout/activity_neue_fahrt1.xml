@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screen2">
+    tools:context=".NeueFahrt1">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -20,7 +20,7 @@
     </android.support.design.widget.BottomNavigationView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_neueFahrt1"
         android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginTop="4dp"
@@ -45,7 +45,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toStartOf="@+id/btn_offer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt1" />
 
 
     <Button
@@ -61,7 +61,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toStartOf="@+id/btn_both"
         app:layout_constraintStart_toEndOf="@+id/btn_search"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt1" />
 
     <Button
         android:id="@+id/btn_both"
@@ -76,7 +76,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_offer"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt1" />
 
     <TextView
         android:id="@+id/textView2"
