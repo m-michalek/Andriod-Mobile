@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/Username"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,16 +19,16 @@
         android:layout_marginTop="127dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/user_name"
+        android:hint="@string/user_name"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/Password"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/Username" />
 
     <Button
         android:id="@+id/btn_login"
@@ -57,15 +57,16 @@
         android:text="@string/log_in_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textColor="@android:color/black"
+        android:onClick="onClickLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
         app:layout_constraintVertical_bias="0.838" />
 
-    <TextView
-        android:id="@+id/link_forgot_password"
+    <Button
+        android:id="@+id/btn_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
@@ -73,13 +74,15 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="12dp"
         android:text="forgot password"
+        android:background="@android:color/transparent"
+        android:onClick="onClick_ForgotPassword"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
-    <TextView
-        android:id="@+id/link_create_account"
+    <Button
+        android:id="@+id/btn_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="110dp"
@@ -87,6 +90,8 @@
         android:layout_marginStart="144dp"
         android:layout_marginTop="55dp"
         android:text="Create Account"
+        android:background="@android:color/transparent"
+        android:onClick="onClick_CreateAccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
