@@ -18,8 +18,14 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
     EditText txt_date_FrAb, txt_time_FrAb;
     Button btn_datepicker_SpAn, btn_timepicker_SpAn;
     EditText txt_date_SpAn, txt_time_SpAn;
+    Button btn_datepicker_FrAbR, btn_timepicker_FrAbR;
+    EditText txt_date_FrAbR, txt_time_FrAbR;
+    Button btn_datepicker_SpAnR, btn_timepicker_SpAnR;
+    EditText txt_date_SpAnR, txt_time_SpAnR;
     private int mYear_FrAb, mMonth_FrAb, mDay_FrAb, mHour_FrAb, mMinute_FrAb;
     private int mYear_SpAn, mMonth_SpAn, mDay_SpAn, mHour_SpAn, mMinute_SpAn;
+    private int mYear_FrAbR, mMonth_FrAbR, mDay_FrAbR, mHour_FrAbR, mMinute_FrAbR;
+    private int mYear_SpAnR, mMonth_SpAnR, mDay_SpAnR, mHour_SpAnR, mMinute_SpAnR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +38,35 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         btn_datepicker_SpAn = (Button) findViewById(R.id.btn_datepicker_SpAn);
         btn_timepicker_SpAn = (Button) findViewById(R.id.btn_timepicker_SpAn);
 
+        btn_datepicker_FrAbR = (Button) findViewById(R.id.btn_datepicker_FrAbR);
+        btn_timepicker_FrAbR = (Button) findViewById(R.id.btn_timepicker_FrAbR);
+
+        btn_datepicker_SpAnR = (Button) findViewById(R.id.btn_datepicker_SpAnR);
+        btn_timepicker_SpAnR = (Button) findViewById(R.id.btn_timepicker_SpAnR);
+
         txt_date_FrAb = (EditText) findViewById(R.id.txt_date_FrAb);
         txt_time_FrAb = (EditText) findViewById(R.id.txt_time_FrAb);
 
         txt_date_SpAn = (EditText) findViewById(R.id.txt_date_SpAn);
         txt_time_SpAn = (EditText) findViewById(R.id.txt_time_SpAn);
 
+        txt_date_FrAbR = (EditText) findViewById(R.id.txt_date_FrAbR);
+        txt_time_FrAbR = (EditText) findViewById(R.id.txt_time_FrAbR);
+
+        txt_date_SpAnR = (EditText) findViewById(R.id.txt_date_SpAnR);
+        txt_time_SpAnR = (EditText) findViewById(R.id.txt_time_SpAnR);
+
         btn_datepicker_FrAb.setOnClickListener(this);
         btn_timepicker_FrAb.setOnClickListener(this);
 
         btn_datepicker_SpAn.setOnClickListener(this);
         btn_timepicker_SpAn.setOnClickListener(this);
+
+        btn_datepicker_FrAbR.setOnClickListener(this);
+        btn_timepicker_FrAbR.setOnClickListener(this);
+
+        btn_datepicker_SpAnR.setOnClickListener(this);
+        btn_timepicker_SpAnR.setOnClickListener(this);
 
     }
 
@@ -134,6 +158,92 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
                         }, mHour_SpAn, mMinute_SpAn, false);
                 timePickerDialog_SpAn.show();
             }
+// Rückweg
+        if (v == btn_datepicker_FrAbR) {
+
+            // Get Current Date
+            final Calendar c_FrAbR = Calendar.getInstance();
+            mYear_FrAbR = c_FrAbR.get(Calendar.YEAR);
+            mMonth_FrAbR = c_FrAbR.get(Calendar.MONTH);
+            mDay_FrAbR = c_FrAbR.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog_FrAbR = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            txt_date_FrAbR.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    }, mYear_FrAbR, mMonth_FrAbR, mDay_FrAbR);
+            datePickerDialog_FrAbR.show();
+        }
+        if (v == btn_timepicker_FrAbR) {
+
+            // Get Current Time
+            final Calendar c_FrAbR = Calendar.getInstance();
+            mHour_FrAbR = c_FrAbR.get(Calendar.HOUR_OF_DAY);
+            mMinute_FrAbR = c_FrAbR.get(Calendar.MINUTE);
+
+            // Launch Time Picker Dialog
+            TimePickerDialog timePickerDialog_FrAbR = new TimePickerDialog(this,
+                    new TimePickerDialog.OnTimeSetListener() {
+
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay,
+                                              int minute) {
+
+                            txt_time_FrAbR.setText(hourOfDay + ":" + minute);
+                        }
+                    }, mHour_FrAbR, mMinute_FrAbR, false);
+            timePickerDialog_FrAbR.show();
+        }
+// Späteste Ankunft
+        if (v == btn_datepicker_SpAnR) {
+
+            // Get Current Date
+            final Calendar c_SpAnR = Calendar.getInstance();
+            mYear_SpAn = c_SpAnR.get(Calendar.YEAR);
+            mMonth_SpAn = c_SpAnR.get(Calendar.MONTH);
+            mDay_SpAn = c_SpAnR.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog_SpAnR = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            txt_date_SpAnR.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    }, mYear_SpAnR, mMonth_SpAnR, mDay_SpAnR);
+            datePickerDialog_SpAnR.show();
+        }
+        if (v == btn_timepicker_SpAnR) {
+
+            // Get Current Time
+            final Calendar c_SpAnR = Calendar.getInstance();
+            mHour_SpAnR = c_SpAnR.get(Calendar.HOUR_OF_DAY);
+            mMinute_SpAnR = c_SpAnR.get(Calendar.MINUTE);
+
+            // Launch Time Picker Dialog
+            TimePickerDialog timePickerDialog_SpAnR = new TimePickerDialog(this,
+                    new TimePickerDialog.OnTimeSetListener() {
+
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay,
+                                              int minute) {
+
+                            txt_time_SpAnR.setText(hourOfDay + ":" + minute);
+                        }
+                    }, mHour_SpAnR, mMinute_SpAnR, false);
+            timePickerDialog_SpAnR.show();
+        }
         }
 
 }
