@@ -48,18 +48,16 @@
         android:id="@+id/textView8"
         android:layout_width="160dp"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="56dp"
         android:text="Früheste Abfahrt"
-        android:textColor="@android:color/background_light"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt2" />
 
 // Calender + Time
 
+// Früheste Abfahrt
     <EditText
         android:id="@+id/txt_date_FrAb"
         android:layout_width="104dp"
@@ -102,16 +100,60 @@
         app:layout_constraintStart_toEndOf="@+id/txt_time_FrAb"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+
+    // Späteste Ankunft
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Späteste Ankuft"
+        android:text="Späteste Ankunft"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_date_FrAb" />
+
+
+    <EditText
+        android:id="@+id/txt_date_SpAn"
+        android:layout_width="104dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="select date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btn_datepicker_SpAn"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toEndOf="@+id/txt_date_SpAn"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/txt_time_SpAn"
+        android:layout_width="105dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="select time"
+        app:layout_constraintStart_toEndOf="@+id/btn_datepicker_SpAn"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btn_timepicker_SpAn"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/btn_datepicker_FrAb"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_edit"
+        app:layout_constraintStart_toEndOf="@+id/txt_time_SpAn"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
 
 </android.support.constraint.ConstraintLayout>
