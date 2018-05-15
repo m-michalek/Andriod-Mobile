@@ -34,6 +34,17 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
         btn_both = findViewById(R.id.btn_both);
         btn_both.setOnClickListener(this);
 
+        //get the spinner from the xml.
+        Spinner dropdown = findViewById(R.id.spinner_anzahl_sitze);
+        //create a list of items for the spinner.
+        String[] items = new String[]{"3", "2", "1"};
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
+        //There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+
+        //set the spinners adapter to the previously created one.
+        dropdown.setAdapter(adapter);
+
 
     }
 
@@ -75,6 +86,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
         }
 
     }
+
 
     // When clicking back you get redirected to starting screen.
     public void onBackPressed(){

@@ -126,11 +126,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="16dp"
         android:text="Späteste Ankunft um:"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/txt_anzahl_sitze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Anzahl Sitzplätze:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/btn_weiter_screen2"
@@ -172,6 +183,15 @@
             android:text="Nur Hinfahrt"
             android:textAlignment="viewStart" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_anzahl_sitze"
+        android:layout_width="77dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_anzahl_sitze"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
 </android.support.constraint.ConstraintLayout>
