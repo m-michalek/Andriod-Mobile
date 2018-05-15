@@ -34,16 +34,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
         btn_both = findViewById(R.id.btn_both);
         btn_both.setOnClickListener(this);
 
-        //get the spinner from the xml.
-        Spinner dropdown = findViewById(R.id.spinner_umweg);
-        //create a list of items for the spinner.
-        String[] items = new String[]{"5", "0", "7", "10", "15"};
-        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
-        //There are multiple variations of this, but this is the basic variant.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 
-        //set the spinners adapter to the previously created one.
-        dropdown.setAdapter(adapter);
     }
 
 
@@ -60,23 +51,23 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
 
             case R.id.btn_search:
                 // do your code
-                btn_offer.setBackgroundResource(R.color.button_color);
-                btn_both.setBackgroundResource(R.color.button_color);
-                btn_search.setBackgroundColor(Color.CYAN);
+                btn_offer.setBackgroundResource(R.drawable.button_style);
+                btn_both.setBackgroundResource(R.drawable.button_style);
+                btn_search.setBackgroundResource(R.drawable.button_style_clicked);
                 break;
 
             case R.id.btn_offer:
                 // do your code
-                btn_search.setBackgroundResource(R.color.button_color);
-                btn_both.setBackgroundResource(R.color.button_color);
-                btn_offer.setBackgroundColor(Color.CYAN);
+                btn_search.setBackgroundResource(R.drawable.button_style);
+                btn_both.setBackgroundResource(R.drawable.button_style);
+                btn_offer.setBackgroundResource(R.drawable.button_style_clicked);
                 break;
 
             case R.id.btn_both:
                 // do your code
-                btn_search.setBackgroundResource(R.color.button_color);
-                btn_offer.setBackgroundResource(R.color.button_color);
-                btn_both.setBackgroundColor(Color.CYAN);
+                btn_search.setBackgroundResource(R.drawable.button_style);
+                btn_offer.setBackgroundResource(R.drawable.button_style);
+                btn_both.setBackgroundResource(R.drawable.button_style_clicked);
                 break;
 
             default:
@@ -87,7 +78,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
 
     // When clicking back you get redirected to starting screen.
     public void onBackPressed(){
-        System.out.println("Neue Fahrt1 onBackPressed() aufgerufen.");
+        System.out.println("MainActivity onBackPressed() aufgerufen.");
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         this.finish();

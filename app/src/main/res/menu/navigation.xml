@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/navigation_offer"
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@drawable/offer_icon_durchsichtig"
         android:title="@string/navigation_offer" />
 
     <item
@@ -13,17 +13,17 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@android:drawable/ic_menu_mylocation"
+        android:icon="@drawable/panda_icon_durchsichtig"
         android:title="@string/navigation_home" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@android:drawable/sym_action_chat"
+        android:icon="@drawable/message_icon_durchsichtig"
         android:title="@string/navigation_notifications" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@android:drawable/btn_star"
+        android:icon="@drawable/profile_icon_durchsichtig"
         android:title="@string/navigation_profile" />
 
 
