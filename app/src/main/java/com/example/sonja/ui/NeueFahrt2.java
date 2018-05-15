@@ -2,6 +2,7 @@ package com.example.sonja.ui;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
     EditText txt_date_FrAbR, txt_time_FrAbR;
     Button btn_datepicker_SpAnR, btn_timepicker_SpAnR;
     EditText txt_date_SpAnR, txt_time_SpAnR;
+    Button btn_startSearch;
     private int mYear_FrAb, mMonth_FrAb, mDay_FrAb, mHour_FrAb, mMinute_FrAb;
     private int mYear_SpAn, mMonth_SpAn, mDay_SpAn, mHour_SpAn, mMinute_SpAn;
     private int mYear_FrAbR, mMonth_FrAbR, mDay_FrAbR, mHour_FrAbR, mMinute_FrAbR;
@@ -32,29 +34,33 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neue_fahrt2);
 
-        btn_datepicker_FrAb = (Button) findViewById(R.id.btn_datepicker_FrAb);
-        btn_timepicker_FrAb = (Button) findViewById(R.id.btn_timepicker_FrAb);
+        btn_datepicker_FrAb = findViewById(R.id.btn_datepicker_FrAb);
+        btn_timepicker_FrAb = findViewById(R.id.btn_timepicker_FrAb);
 
-        btn_datepicker_SpAn = (Button) findViewById(R.id.btn_datepicker_SpAn);
-        btn_timepicker_SpAn = (Button) findViewById(R.id.btn_timepicker_SpAn);
+        btn_datepicker_SpAn = findViewById(R.id.btn_datepicker_SpAn);
+        btn_timepicker_SpAn = findViewById(R.id.btn_timepicker_SpAn);
 
-        btn_datepicker_FrAbR = (Button) findViewById(R.id.btn_datepicker_FrAbR);
-        btn_timepicker_FrAbR = (Button) findViewById(R.id.btn_timepicker_FrAbR);
+        btn_datepicker_FrAbR = findViewById(R.id.btn_datepicker_FrAbR);
+        btn_timepicker_FrAbR = findViewById(R.id.btn_timepicker_FrAbR);
 
-        btn_datepicker_SpAnR = (Button) findViewById(R.id.btn_datepicker_SpAnR);
-        btn_timepicker_SpAnR = (Button) findViewById(R.id.btn_timepicker_SpAnR);
+        btn_datepicker_SpAnR = findViewById(R.id.btn_datepicker_SpAnR);
+        btn_timepicker_SpAnR = findViewById(R.id.btn_timepicker_SpAnR);
 
-        txt_date_FrAb = (EditText) findViewById(R.id.txt_date_FrAb);
-        txt_time_FrAb = (EditText) findViewById(R.id.txt_time_FrAb);
+        btn_startSearch = findViewById(R.id.btn_startSearch);
+        btn_startSearch.setBackgroundColor(Color.WHITE);
+        btn_startSearch.setTextColor(Color.BLACK);
 
-        txt_date_SpAn = (EditText) findViewById(R.id.txt_date_SpAn);
-        txt_time_SpAn = (EditText) findViewById(R.id.txt_time_SpAn);
+        txt_date_FrAb = findViewById(R.id.txt_date_FrAb);
+        txt_time_FrAb = findViewById(R.id.txt_time_FrAb);
 
-        txt_date_FrAbR = (EditText) findViewById(R.id.txt_date_FrAbR);
-        txt_time_FrAbR = (EditText) findViewById(R.id.txt_time_FrAbR);
+        txt_date_SpAn = findViewById(R.id.txt_date_SpAn);
+        txt_time_SpAn = findViewById(R.id.txt_time_SpAn);
 
-        txt_date_SpAnR = (EditText) findViewById(R.id.txt_date_SpAnR);
-        txt_time_SpAnR = (EditText) findViewById(R.id.txt_time_SpAnR);
+        txt_date_FrAbR = findViewById(R.id.txt_date_FrAbR);
+        txt_time_FrAbR = findViewById(R.id.txt_time_FrAbR);
+
+        txt_date_SpAnR = findViewById(R.id.txt_date_SpAnR);
+        txt_time_SpAnR = findViewById(R.id.txt_time_SpAnR);
 
         btn_datepicker_FrAb.setOnClickListener(this);
         btn_timepicker_FrAb.setOnClickListener(this);

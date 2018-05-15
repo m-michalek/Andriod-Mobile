@@ -4,6 +4,7 @@ package com.example.sonja.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.preference.PreferenceManager;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity  {
 
         btn_logIn = findViewById(R.id.btn_login);
         btn_logIn.getBackground().setAlpha(1);
+        btn_logIn.setBackgroundColor(Color.WHITE);
+        btn_logIn.setTextColor(Color.BLACK);
 
         btn_forgotPassword = findViewById(R.id.btn_forgot_password);
         btn_forgotPassword.getBackground().setAlpha(1);
