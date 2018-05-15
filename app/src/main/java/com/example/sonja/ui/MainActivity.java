@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity  {
         firstRun = sharedPrefs.getString(getString(R.string.sharedPrefsFirstRunString), "true");
         System.out.println("First run (String): " + firstRun);
 
-        // Um erstes Mal App-Öffnen zu simulieren, den Code aus Line 49-52 und 74-75 aktivieren,
+        // Um erstes Mal App-Öffnen zu simulieren, den Code aus Line 52-54 und 77-78 aktivieren,
         // einmal laufen lassen, anschließen wieder auskommentieren und nun richtig laufen lassen.
 
         /*SharedPreferences.Editor clear = sharedPrefs.edit();

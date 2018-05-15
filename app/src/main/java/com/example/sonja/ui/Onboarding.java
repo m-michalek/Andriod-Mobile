@@ -14,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 public class Onboarding extends Activity {
 
@@ -44,7 +43,6 @@ public class Onboarding extends Activity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
 
     }
 
@@ -131,32 +129,30 @@ public class Onboarding extends Activity {
     // Fourth and final Page of Onboarding Slides
     public static class Onboarding4 extends Fragment {
 
-        Button btn_GetStarted;
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_onboarding4, container, false);
             return rootView;
 
-           // btn_GetStarted = findViewById(R.id.btn_GetStarted);
-           // btn_GetStarted.getBackground().setAlpha(1);
         }
-
-        public void onClickGetStarted (View v) {
-            System.out.println("onClick_GetStarted aufgerufen");
-           /* Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            this.finish();*/
-        }
-
     }
 
 
+    // At the end of the last onboarding slide this method is called
     public void onClickGetStarted (View v) {
             System.out.println("onClick_GetStarted aufgerufen");
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             this.finish();
+    }
+
+    // Any time you press back in the onboarding process you get redirected to the starting screen.
+    public void onBackPressed(){
+        System.out.println("Onboarding onBackPressed() aufgerufen.");
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 
     /**

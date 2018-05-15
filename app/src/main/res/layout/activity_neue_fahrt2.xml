@@ -295,7 +295,7 @@
         android:layout_height="40dp"
         android:layout_marginBottom="1dp"
         android:layout_marginTop="20dp"
-        android:background="@android:color/background_light"
+        android:backgroundTint="@android:color/white"
         android:text="Suche starten"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/navigation"

@@ -2,6 +2,7 @@ package com.example.sonja.ui;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,8 +48,6 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         btn_timepicker_SpAnR = findViewById(R.id.btn_timepicker_SpAnR);
 
         btn_startSearch = findViewById(R.id.btn_startSearch);
-        btn_startSearch.setBackgroundColor(Color.WHITE);
-        btn_startSearch.setTextColor(Color.BLACK);
 
         txt_date_FrAb = findViewById(R.id.txt_date_FrAb);
         txt_time_FrAb = findViewById(R.id.txt_time_FrAb);
@@ -250,6 +249,14 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
                     }, mHour_SpAnR, mMinute_SpAnR, false);
             timePickerDialog_SpAnR.show();
         }
+        }
+
+        // When clicking on back you get redirected to NeueFahrt1
+        public void onBackPressed(){
+            System.out.println("Neue Fahrt2 onBackPressed() aufgerufen.");
+            Intent intent = new Intent(this, NeueFahrt1.class);
+            startActivity(intent);
+            this.finish();
         }
 
 }

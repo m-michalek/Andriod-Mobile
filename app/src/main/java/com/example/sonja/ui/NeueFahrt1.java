@@ -22,16 +22,16 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_neue_fahrt1);
 
         // Buttons OnClickListener
-        btn_weiter_screen2 = (Button) findViewById(R.id.btn_weiter_screen2);
+        btn_weiter_screen2 = findViewById(R.id.btn_weiter_screen2);
         btn_weiter_screen2.setOnClickListener(this);
 
-        btn_search = (Button) findViewById(R.id.btn_search);
+        btn_search = findViewById(R.id.btn_search);
         btn_search.setOnClickListener(this);
 
-        btn_offer = (Button) findViewById(R.id.btn_offer);
+        btn_offer = findViewById(R.id.btn_offer);
         btn_offer.setOnClickListener(this);
 
-        btn_both = (Button) findViewById(R.id.btn_both);
+        btn_both = findViewById(R.id.btn_both);
         btn_both.setOnClickListener(this);
 
         //get the spinner from the xml.
@@ -83,5 +83,13 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
                 break;
         }
 
+    }
+
+    // When clicking back you get redirected to starting screen.
+    public void onBackPressed(){
+        System.out.println("Neue Fahrt1 onBackPressed() aufgerufen.");
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }
