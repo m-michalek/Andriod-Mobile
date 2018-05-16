@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Onboarding"
-    android:background="@drawable/onboarding_03">
+    android:background="@drawable/onboarding_05">
 
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_GetStarted"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="550dp"
+        android:text="@string/btn_getStarted"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:onClick="onClickGetStarted"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+</android.support.constraint.ConstraintLayout >

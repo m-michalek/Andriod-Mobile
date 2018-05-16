@@ -87,6 +87,8 @@ public class Onboarding extends Activity {
          * number.
          */
         public static Onboarding1 newInstance(int sectionNumber) {
+
+            System.out.println("Onbaording1");
             Onboarding1 fragment = new Onboarding1();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
@@ -126,13 +128,25 @@ public class Onboarding extends Activity {
 
     }
 
-    // Fourth and final Page of Onboarding Slides
+    // Fourth Page of Onboarding Slides
     public static class Onboarding4 extends Fragment {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_onboarding4, container, false);
+            return rootView;
+
+        }
+    }
+
+    // Fifth and final Page of Onboarding Slides
+    public static class Onboarding5 extends Fragment {
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_onboarding5, container, false);
             return rootView;
 
         }
@@ -181,6 +195,9 @@ public class Onboarding extends Activity {
                 case 3:
                     Onboarding4 tab4 = new Onboarding4();
                     return tab4;
+                case 4:
+                    Onboarding5 tab5 = new Onboarding5();
+                    return tab5;
                 default:
                     return null;
             }
@@ -188,8 +205,8 @@ public class Onboarding extends Activity {
 
         @Override
         public int getCount() {
-            // Show 4 total pages.
-            return 4;
+            // Show 5 total pages.
+            return 5;
         }
 
         @Override
@@ -203,6 +220,8 @@ public class Onboarding extends Activity {
                     return "SECTION 3";
                 case 3:
                     return "SECTION 4";
+                case 4:
+                    return "SECTION 5";
             }
             return null;
         }
