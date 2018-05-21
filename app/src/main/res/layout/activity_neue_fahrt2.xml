@@ -50,10 +50,8 @@
         android:layout_width="115dp"
         android:layout_height="60dp"
         android:layout_marginBottom="420dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
-
         android:background="@drawable/button_style"
         android:text="Mitfahrer"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
@@ -67,8 +65,6 @@
         android:layout_width="115dp"
         android:layout_height="60dp"
         android:layout_marginBottom="420dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_style_white"
         android:text="Fahrer"
@@ -83,8 +79,7 @@
         android:layout_width="115dp"
         android:layout_height="60dp"
         android:layout_marginBottom="420dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_style"
         android:text="Beides"
@@ -205,15 +200,15 @@
         android:layout_marginStart="85dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:srcCompat="@drawable/home_white" />
+        app:srcCompat="@drawable/work_white"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="89dp"
+        android:layout_marginStart="95dp"
         android:layout_marginTop="100dp"
-        android:text="Zuhause"
+        android:text="Arbeit"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -226,13 +221,13 @@
         android:layout_marginTop="65dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt2"
-        app:srcCompat="@drawable/work_white" />
+        app:srcCompat="@drawable/home_white"/>
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
         android:text="nach"
         android:textSize="13sp"
@@ -245,7 +240,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
-        android:text="Arbeit"
+        android:text="Zuhause"
         android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/view" />

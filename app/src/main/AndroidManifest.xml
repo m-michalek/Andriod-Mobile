@@ -22,11 +22,10 @@
         <activity
             android:name=".Onboarding"
             android:label="@string/title_activity_onboarding"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".NeueFahrt1" />
-        <activity android:name=".NeueFahrt2"/>
-
+        <activity android:name=".NeueFahrt2" />
+        <activity android:name=".Confirm"></activity>
     </application>
 
 </manifest>

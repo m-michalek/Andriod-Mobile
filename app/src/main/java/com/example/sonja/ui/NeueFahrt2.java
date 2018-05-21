@@ -70,7 +70,7 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
 
             case R.id.btn_weiter_screen3:
                 // auf Screen3 weiterleiten
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, Confirm.class);
                 startActivity(intent);
                 this.finish();
                 break;
