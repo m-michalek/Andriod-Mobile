@@ -46,8 +46,6 @@
         app:layout_constraintTop_toBottomOf="@+id/text_neueFahrt2" />
 
 
-
-
     <Button
         android:id="@+id/btn_confirm"
         android:layout_width="0dp"
@@ -364,8 +362,68 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
         android:text="freie Sitzplätze"
-        app:layout_constraintStart_toEndOf="@+id/text_arbeit2"
+        app:layout_constraintStart_toEndOf="@+id/image_work2"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/txt_abfahrt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:text="Abfahrt"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/grey_background" />
+
+    <TextView
+        android:id="@+id/txt_ankunft1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:text="Ankunft"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/txt_abfahrt1" />
+
+    <TextView
+        android:id="@+id/txt_sitze1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:text="Sitze"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ankunft1" />
+
+    <TextView
+        android:id="@+id/txt_abfahrt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:text="Abfahrt"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/grey_background2" />
+
+    <TextView
+        android:id="@+id/txt_ankunft2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:text="Ankunft"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/txt_abfahrt2" />
+
+    <TextView
+        android:id="@+id/txt_sitze2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:text="Sitze"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ankunft2" />
 
 
 </android.support.constraint.ConstraintLayout>

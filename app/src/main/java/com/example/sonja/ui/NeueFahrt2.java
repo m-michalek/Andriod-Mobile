@@ -13,6 +13,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.TextView;
 
 import java.util.Calendar;
 
@@ -102,15 +103,18 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
 
+
                 TimePickerDialog mTimePicker;
                 mTimePicker = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                         txt_abfahrtszeit.setText( selectedHour + ":" + selectedMinute + "  Uhr");
+
                     }
                 }, hour, minute, true);
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
+
                 break;
 
             case R.id.txt_ankunftszeit:

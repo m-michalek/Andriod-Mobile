@@ -25,7 +25,8 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".NeueFahrt1" />
         <activity android:name=".NeueFahrt2" />
-        <activity android:name=".Confirm"></activity>
+        <activity android:name=".Confirm" />
+        <activity android:name=".Confirm2"></activity>
     </application>
 
 </manifest>
