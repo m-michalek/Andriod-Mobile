@@ -16,7 +16,7 @@ import java.util.Calendar;
 
 public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListener{
 
-
+    Integer mitfahrer=0, fahrer=0, both=0;
     Button btn_weiter_screen2;
     Button btn_search;
     Button btn_offer;
@@ -28,6 +28,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neue_fahrt1);
+
 
         // Buttons OnClickListener
         btn_weiter_screen2 = findViewById(R.id.btn_weiter_screen2);
@@ -47,6 +48,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
 
         txt_ankunftszeit = findViewById(R.id.txt_ankunftszeit);
         txt_ankunftszeit.setOnClickListener(this);
+
 
         //get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.spinner_anzahl_sitze);
@@ -69,9 +71,25 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
 
             case R.id.btn_weiter_screen2:
                 // auf Screen3 weiterleiten
-                Intent intent = new Intent(this, NeueFahrt2.class);
-                startActivity(intent);
-                this.finish();
+                if (mitfahrer == 1) {
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
+                    this.finish();
+            }
+                if (fahrer == 1) {
+                    Intent intent = new Intent(this, NeueFahrt2.class);
+                    startActivity(intent);
+                    this.finish();
+                }
+                if (both == 1) {
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
+                    this.finish();
+                }
+                else {
+                    System.out.println("Bitte Angabe machen.");
+                }
+
                 break;
 
             case R.id.btn_search:
@@ -79,6 +97,9 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
                 btn_offer.setBackgroundResource(R.drawable.button_style);
                 btn_both.setBackgroundResource(R.drawable.button_style);
                 btn_search.setBackgroundResource(R.drawable.button_style_clicked);
+                mitfahrer = 1;
+                fahrer = 0;
+                both = 0;
                 break;
 
             case R.id.btn_offer:
@@ -86,6 +107,9 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
                 btn_search.setBackgroundResource(R.drawable.button_style);
                 btn_both.setBackgroundResource(R.drawable.button_style);
                 btn_offer.setBackgroundResource(R.drawable.button_style_clicked);
+                mitfahrer = 0;
+                fahrer = 1;
+                both = 0;
                 break;
 
             case R.id.btn_both:
@@ -93,6 +117,9 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
                 btn_search.setBackgroundResource(R.drawable.button_style);
                 btn_offer.setBackgroundResource(R.drawable.button_style);
                 btn_both.setBackgroundResource(R.drawable.button_style_clicked);
+                mitfahrer = 0;
+                fahrer = 0;
+                both = 1;
                 break;
 
             case R.id.txt_abfahrtszeit:
