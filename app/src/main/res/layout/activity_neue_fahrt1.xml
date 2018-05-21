@@ -128,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="23dp"
         android:text="Späteste Ankunft um:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Anzahl Sitzplätze:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +149,7 @@
         android:id="@+id/btn_weiter_screen2"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="3dp"
         android:backgroundTint="@android:color/background_light"
         android:text="Weiter"
         android:textColor="@android:color/background_dark"
@@ -172,14 +172,15 @@
         app:layout_constraintTop_toBottomOf="@+id/view2">
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radio_Hinfahrt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="true"
             android:text="Hinfahrt" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radio_nurHinfahrt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -192,7 +193,7 @@
         android:layout_width="77dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/txt_anzahl_sitze"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -270,7 +271,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txt_abfahrtszeit"
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -279,21 +280,25 @@
         android:hint="Uhrzeit eintragen"
         android:inputType="textPersonName"
         android:textSize="15sp"
+        android:editable="false"
+        android:focusable="false"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txt_ankunftszeit"
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="4dp"
+        android:editable="false"
         android:ems="10"
+        android:focusable="false"
         android:hint="Uhrzeit eintragen"
         android:inputType="textPersonName"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_abfahrtszeit" />
 
 
 </android.support.constraint.ConstraintLayout>
