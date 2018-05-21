@@ -6,20 +6,12 @@
         android:icon="@drawable/offer_icon_durchsichtig"
         android:title="@string/navigation_offer" />
 
-    <item
-        android:id="@+id/navigation_search"
-        android:icon="@android:drawable/ic_search_category_default"
-        android:title="@string/navigation_search" />
 
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/panda_icon_durchsichtig"
         android:title="@string/navigation_home" />
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/message_icon_durchsichtig"
-        android:title="@string/navigation_notifications" />
 
     <item
         android:id="@+id/navigation_profile"
