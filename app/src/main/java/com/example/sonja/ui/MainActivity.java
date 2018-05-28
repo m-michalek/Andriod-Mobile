@@ -1,5 +1,8 @@
 package com.example.sonja.ui;
 
+import com.amazonaws.mobile.client.AWSMobileClient;
+import com.amazonaws.mobile.client.AWSStartupHandler;
+import com.amazonaws.mobile.client.AWSStartupResult;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +15,10 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -23,6 +28,9 @@ public class MainActivity extends AppCompatActivity  {
     SharedPreferences sharedPrefs;
     Context ctx;
     String firstRun;
+    EditText edit_username;
+    EditText edit_password;
+    String Username, Password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +48,19 @@ public class MainActivity extends AppCompatActivity  {
 
         btn_createAccount = findViewById(R.id.btn_create_account);
         btn_createAccount.getBackground().setAlpha(1);
+
+        edit_username = findViewById(R.id.Username);
+        edit_password = findViewById(R.id.Password);
+
+// Log In AWS
+        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
+            @Override
+            public void onComplete(AWSStartupResult awsStartupResult) {
+                Log.d("YourMainActivity", "AWSMobileClient is instantiated and " +
+                        "you are connected to AWS!");
+            }
+        }).execute();
+
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -81,15 +102,19 @@ public class MainActivity extends AppCompatActivity  {
 
     public void onClickLogin(View v) {
         //ruft NeueFahrt1 auf
-        Intent intent = new Intent(this, NeueFahrt1.class);
+        Intent intent = new Intent(this, AuthenticatorActivity.class);
         startActivity(intent);
+        // Username und Password in String speichern
+        Username = String.valueOf(edit_username.getText().toString());
+        Password = String.valueOf(edit_password.getText().toString());
+        System.out.println(Username);
         this.finish();
 
     }
 
     public void onClick(View v) {
         //ruft NeueFahrt1 auf
-        Intent intent = new Intent(this, NeueFahrt1.class);
+        Intent intent = new Intent(this, AuthenticatorActivity.class);
 
         startActivity(intent);
         this.finish();
