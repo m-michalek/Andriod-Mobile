@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity  {
     SharedPreferences sharedPrefs;
     Context ctx;
     String firstRun;
+    // Fahrten updaten
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
