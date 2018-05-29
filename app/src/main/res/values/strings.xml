@@ -9,12 +9,44 @@
     <string name="user_password">Passwort</string>
     <string name="log_in_button">Log In</string>
 
+    // für NeueFahrt1 Screen
+    <string name="nurHinfahrt">Nur Hinfahrt</string>
+    <string name="frAb">Früheste Abfahrt um:</string>
+    <string name="spAn">Späteste Ankunft um:</string>
+    <string name="uhrzeit">Uhrzeit eintragen</string>
+    <string name="weiter">Weiter</string>
+    <string name="fahrer">Fahrer</string>
+    <string name="mitfahrer">Mitfahrer</string>
+    <string name="beides">Beides</string>
+    <string name="anzSitze">Anzahl Sitzplätze:</string>
+    <string name="vonG">Von</string>
+
+
     // für Menü Buttons
     <string name="navigation_offer">Offer</string>
     <string name="navigation_search">Search</string>
     <string name="navigation_home">Home</string>
     <string name="navigation_notifications">Notifications</string>
     <string name="navigation_profile">Profile</string>
+
+
+    // für Confirm Screen
+    <string name="abfahrt">ab frühestens</string>
+    <string name="ankunft">an spätestens</string>
+    <string name="sitze">freie Sitzplätze</string>
+    <string name="zuhause">Zuhause</string>
+    <string name="arbeit">Arbeit</string>
+    <string name="notification_fahrer">Du bist Fahrer!</string>
+    <string name="uebersicht">Übersicht</string>
+    <string name="hinfahrt">Hinfahrt</string>
+    <string name="rueckfahrt">Rückfahrt</string>
+    <string name="von">von</string>
+    <string name="nach">nach</string>
+
+    // für Confirm2 Screen
+    <string name="ok">Ok!</string>
+    <string name="confirm">Bestätigung</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

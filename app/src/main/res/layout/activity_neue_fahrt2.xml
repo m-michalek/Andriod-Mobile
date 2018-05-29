@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginTop="4dp"
-        android:text="Rückfahrt"
+        android:text="@string/rueckfahrt"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -53,7 +53,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_style"
-        android:text="Mitfahrer"
+        android:text="@string/mitfahrer"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toStartOf="@+id/btn_offer"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +67,7 @@
         android:layout_marginBottom="420dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_style_white"
-        android:text="Fahrer"
+        android:text="@string/fahrer"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toStartOf="@+id/btn_both"
@@ -82,7 +82,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_style"
-        android:text="Beides"
+        android:text="@string/beides"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_offer"
@@ -114,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
-        android:text="Früheste Abfahrt um:"
+        android:text="@string/frAb"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="23dp"
-        android:text="Späteste Ankunft um:"
+        android:text="@string/spAn"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
-        android:text="Anzahl Sitzplätze:"
+        android:text="@string/anzSitze"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -147,7 +147,7 @@
         android:layout_height="40dp"
         android:layout_marginBottom="3dp"
         android:backgroundTint="@android:color/background_light"
-        android:text="Weiter"
+        android:text="@string/weiter"
         android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -173,14 +173,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="true"
-            android:text="Hinfahrt" />
+            android:text="@string/hinfahrt" />
 
         <RadioButton
             android:id="@+id/radio_nurHinfahrt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nur Hinfahrt"
+            android:text="@string/nurHinfahrt"
             android:textAlignment="viewStart" />
     </RadioGroup>
 
@@ -208,7 +208,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
         android:layout_marginTop="100dp"
-        android:text="Arbeit"
+        android:text="@string/arbeit"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -229,7 +229,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
-        android:text="nach"
+        android:text="@string/nach"
         android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -240,7 +240,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
-        android:text="Zuhause"
+        android:text="@string/zuhause"
         android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -261,7 +261,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="140dp"
         android:layout_marginStart="30dp"
-        android:text="Von"
+        android:text="@string/vonG"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/imageView5" />

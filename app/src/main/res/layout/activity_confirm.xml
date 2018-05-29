@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginTop="4dp"
-        android:text="Übersicht"
+        android:text="@string/uebersicht"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -71,7 +71,7 @@
         android:paddingEnd="80dp"
         android:paddingLeft="80dp"
         android:paddingTop="1dp"
-        android:text="Du bist Fahrer!"
+        android:text="@string/notification_fahrer"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="90dp"
-        android:text="Hinfahrt"
+        android:text="@string/hinfahrt"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/image_uhr"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="16dp"
-        android:text="von"
+        android:text="@string/von"
         app:layout_constraintStart_toStartOf="@+id/grey_background"
         app:layout_constraintTop_toTopOf="@+id/grey_background" />
 
@@ -145,7 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
         android:layout_marginTop="75dp"
-        android:text="nach"
+        android:text="@string/nach"
         app:layout_constraintStart_toStartOf="@+id/grey_background"
         app:layout_constraintTop_toTopOf="@+id/grey_background" />
 
@@ -175,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="37dp"
-        android:text="Zuhause"
+        android:text="@string/zuhause"
         android:textColor="@color/colorAccent"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -187,7 +187,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="59dp"
         android:layout_marginTop="97dp"
-        android:text="Arbeit"
+        android:text="@string/arbeit"
         android:textColor="@color/colorAccent"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -214,7 +214,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="270dp"
-        android:text="Rückfahrt"
+        android:text="@string/rueckfahrt"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/image_uhr"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -287,7 +287,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="217dp"
-        android:text="Arbeit"
+        android:text="@string/arbeit"
         android:textColor="@color/colorAccent"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@+id/textView4"
@@ -299,7 +299,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="277dp"
-        android:text="Zuhause"
+        android:text="@string/zuhause"
         android:textColor="@color/colorAccent"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -311,7 +311,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        android:text="ab frühestens"
+        android:text="@string/abfahrt"
         app:layout_constraintStart_toEndOf="@+id/image_haus"
         app:layout_constraintTop_toTopOf="@+id/grey_background" />
 
@@ -321,7 +321,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        android:text="an spätestens"
+        android:text="@string/ankunft"
         app:layout_constraintStart_toEndOf="@+id/image_haus"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -331,7 +331,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        android:text="freie Sitzplätze"
+        android:text="@string/sitze"
         app:layout_constraintStart_toEndOf="@+id/image_haus"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -341,7 +341,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        android:text="ab frühestens"
+        android:text="@string/abfahrt"
         app:layout_constraintStart_toEndOf="@+id/image_work2"
         app:layout_constraintTop_toTopOf="@+id/grey_background2" />
 
@@ -351,7 +351,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        android:text="an spätestens"
+        android:text="@string/ankunft"
         app:layout_constraintStart_toEndOf="@+id/image_work2"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -361,7 +361,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        android:text="freie Sitzplätze"
+        android:text="@string/sitze"
         app:layout_constraintStart_toEndOf="@+id/image_work2"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
