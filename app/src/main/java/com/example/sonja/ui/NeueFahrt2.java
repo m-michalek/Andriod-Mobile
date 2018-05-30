@@ -19,6 +19,7 @@ import java.util.Calendar;
 
 public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListener {
 
+    Integer mitfahrer=0, fahrer=0, both=0;
     Button btn_weiter_screen3;
     Button btn_search;
     Button btn_offer;
@@ -31,7 +32,22 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neue_fahrt2);
-
+/* Daten aus NeueFahrt1 auslesen - nicht ready
+        Intent intent = new Intent();
+        NeueFahrt1 f = new NeueFahrt1();
+        if (NeueFahrt1.mitfahrer == 1){
+            mitfahrer = 1;
+            btn_search.setBackgroundResource(R.drawable.button_style_clicked);
+        }
+        if (NeueFahrt1.fahrer == 1){
+            fahrer = 1;
+            btn_offer.setBackgroundResource(R.drawable.button_style_clicked);
+        }
+        if (NeueFahrt1.both == 1){
+            both = 1;
+            btn_both.setBackgroundResource(R.drawable.button_style_clicked);
+        }
+*/
         // Buttons OnClickListener
         btn_weiter_screen3 = findViewById(R.id.btn_weiter_screen3);
         btn_weiter_screen3.setOnClickListener(this);
@@ -57,7 +73,7 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         //get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.spinner_anzahl_sitze);
         //create a list of items for the spinner.
-        String[] items = new String[]{"3", "2", "1"};
+        String[] items = new String[]{"1", "2", "3"};
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
         //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -75,10 +91,57 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
 
             case R.id.btn_weiter_screen3:
                 // auf Screen Confirm weiterleiten
-                Intent intent = new Intent(this, Confirm.class);
-                startActivity(intent);
-                this.finish();
+                if (mitfahrer == 1) {
+                    Intent intent = new Intent(this, Confirm.class);
+                    startActivity(intent);
+                    this.finish();
+                }
+                if (fahrer == 1) {
+                    Intent intent = new Intent(this, Confirm.class);
+                    startActivity(intent);
+                    this.finish();
+                }
+                if (both == 1) {
+                    Intent intent = new Intent(this, Confirm.class);
+                    startActivity(intent);
+                    this.finish();
+                }
+                else {
+                    System.out.println("Bitte Angabe machen.");
+                }
+
                 break;
+
+            case R.id.btn_search:
+                // do your code
+                btn_offer.setBackgroundResource(R.drawable.button_style);
+                btn_both.setBackgroundResource(R.drawable.button_style);
+                btn_search.setBackgroundResource(R.drawable.button_style_clicked);
+                mitfahrer = 1;
+                fahrer = 0;
+                both = 0;
+                break;
+
+            case R.id.btn_offer:
+                // do your code
+                btn_search.setBackgroundResource(R.drawable.button_style);
+                btn_both.setBackgroundResource(R.drawable.button_style);
+                btn_offer.setBackgroundResource(R.drawable.button_style_clicked);
+                mitfahrer = 0;
+                fahrer = 1;
+                both = 0;
+                break;
+
+            case R.id.btn_both:
+                // do your code
+                btn_search.setBackgroundResource(R.drawable.button_style);
+                btn_offer.setBackgroundResource(R.drawable.button_style);
+                btn_both.setBackgroundResource(R.drawable.button_style_clicked);
+                mitfahrer = 0;
+                fahrer = 0;
+                both = 1;
+                break;
+
 
             case R.id.btn_switch_back:
                 // auf Screeen NeueFahrt1 weiterleiten

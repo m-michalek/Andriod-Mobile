@@ -16,7 +16,7 @@ import java.util.Calendar;
 
 public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListener{
 
-    Integer mitfahrer=0, fahrer=0, both=0;
+    static Integer mitfahrer=0, fahrer=0, both=0;
     Button btn_weiter_screen2;
     Button btn_search;
     Button btn_offer;
@@ -56,7 +56,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
         //get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.spinner_anzahl_sitze);
         //create a list of items for the spinner.
-        String[] items = new String[]{"3", "2", "1"};
+        String[] items = new String[]{"1", "2", "3"};
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
         //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -73,9 +73,9 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
         switch (v.getId()) {
 
             case R.id.btn_weiter_screen2:
-                // auf Screen3 weiterleiten
+                // auf ... weiterleiten
                 if (mitfahrer == 1) {
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(this, NeueFahrt2.class);
                     startActivity(intent);
                     this.finish();
             }
@@ -85,7 +85,7 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
                     this.finish();
                 }
                 if (both == 1) {
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(this, NeueFahrt2.class);
                     startActivity(intent);
                     this.finish();
                 }
@@ -130,6 +130,18 @@ public class NeueFahrt1 extends AppCompatActivity implements View.OnClickListene
                     Intent intent = new Intent(this, NeueFahrt2.class);
                     startActivity(intent);
                     this.finish();
+                    if (mitfahrer == 1){
+                        NeueFahrt2 a = new NeueFahrt2();
+                        a.mitfahrer = 1;
+                    }
+                    if (fahrer == 1){
+                        NeueFahrt2 b = new NeueFahrt2();
+                        b.fahrer = 1;
+                    }
+                     if (both == 1){
+                        NeueFahrt2 b = new NeueFahrt2();
+                        b.both = 1;
+                    }
                     break;
 
             case R.id.txt_abfahrtszeit:

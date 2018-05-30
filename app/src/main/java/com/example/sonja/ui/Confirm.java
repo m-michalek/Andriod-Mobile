@@ -26,7 +26,7 @@ public class Confirm extends AppCompatActivity implements View.OnClickListener {
 
         abfahrt1.setText("08:00 Uhr");
         ankunft1.setText("09:00 Uhr");
-        sitze1.setText("3");
+        sitze1.setText("1");
 
         abfahrt2 = findViewById(R.id.txt_abfahrt2);
         ankunft2 = findViewById(R.id.txt_ankunft2);
@@ -34,7 +34,7 @@ public class Confirm extends AppCompatActivity implements View.OnClickListener {
 
         abfahrt2.setText("16:00 Uhr");
         ankunft2.setText("17:00 Uhr");
-        sitze2.setText("3");
+        sitze2.setText("1");
 
         // Buttons OnClickListener
         btn_confirm = findViewById(R.id.btn_confirm);
