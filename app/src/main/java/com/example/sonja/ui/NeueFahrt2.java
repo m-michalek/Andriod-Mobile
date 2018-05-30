@@ -61,7 +61,7 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         // Bottom Navigation initialisieren
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    
+
         // Buttons OnClickListener
         btn_weiter_screen3 = findViewById(R.id.btn_weiter_screen3);
         btn_weiter_screen3.setOnClickListener(this);
