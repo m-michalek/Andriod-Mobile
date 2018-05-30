@@ -25,6 +25,7 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
     Button btn_both;
     EditText txt_abfahrtszeit;
     EditText txt_ankunftszeit;
+    Button btn_switch_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,9 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         txt_ankunftszeit = findViewById(R.id.txt_ankunftszeit);
         txt_ankunftszeit.setOnClickListener(this);
 
+        btn_switch_back = findViewById(R.id.btn_switch_back);
+        btn_switch_back.setOnClickListener(this);
+
         //get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.spinner_anzahl_sitze);
         //create a list of items for the spinner.
@@ -70,9 +74,16 @@ public class NeueFahrt2 extends AppCompatActivity implements View.OnClickListene
         switch (v.getId()) {
 
             case R.id.btn_weiter_screen3:
-                // auf Screen3 weiterleiten
+                // auf Screen Confirm weiterleiten
                 Intent intent = new Intent(this, Confirm.class);
                 startActivity(intent);
+                this.finish();
+                break;
+
+            case R.id.btn_switch_back:
+                // auf Screeen NeueFahrt1 weiterleiten
+                Intent intentswitch = new Intent(this, NeueFahrt1.class);
+                startActivity(intentswitch);
                 this.finish();
                 break;
 /*
